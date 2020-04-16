@@ -1,10 +1,13 @@
 {
   "name": "user-profile",
   "version": "0.1.0",
+  "description": "",
+  "main": "index.js",
   "private": true,
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
   "dependencies": {
-    "@babel/core": "^7.9.0",
-    "@babel/polyfill": "^7.8.7",
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.3.2",
     "@testing-library/user-event": "^7.1.2",
@@ -13,11 +16,24 @@
     "react-scripts": "3.4.1",
     "redux": "^4.0.5"
   },
+  "devDependencies": {
+    "@babel/core": "^7.9.0",
+    "@babel/polyfill": "^7.8.7",
+    "@babel/preset-env": "^7.9.5",
+    "@babel/preset-react": "^7.9.4",
+    "babel-loader": "^8.1.0",
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "copy-webpack-plugin": "^5.1.1",
+    "css-loader": "^3.5.2",
+    "node-sass": "^4.13.1",
+    "sass-loader": "^8.0.2",
+    "url-loader": "^4.1.0",
+    "webpack-cli": "^3.3.11",
+    "webpack-dev-server": "^3.10.3"
+  },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "start": "webpack-dev-server --mode development --open --hot",
+    "build": "webpack --mode production"
   },
   "eslintConfig": {
     "extends": "react-app"
